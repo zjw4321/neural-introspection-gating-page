@@ -33,9 +33,430 @@ body {
   color: var(--text-primary);
   line-height: 1.6;
   font-size: 16px;
-  background-color: var(--background-primary);
+  background:
+    radial-gradient(circle at top left, rgba(245, 158, 11, 0.12), transparent 28%),
+    radial-gradient(circle at top right, rgba(14, 165, 233, 0.12), transparent 26%),
+    linear-gradient(180deg, #f8fafc 0%, #ffffff 28%, #f7f3ea 100%);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.project-hero {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top left, rgba(245, 158, 11, 0.18), transparent 30%),
+    radial-gradient(circle at 85% 18%, rgba(15, 23, 42, 0.12), transparent 24%),
+    linear-gradient(180deg, #f8fafc 0%, #fffaf2 100%);
+}
+
+.project-hero::before {
+  content: '';
+  position: absolute;
+  inset: auto -10% -45% auto;
+  width: 28rem;
+  height: 28rem;
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.16), transparent 70%);
+  pointer-events: none;
+}
+
+.project-hero .hero-body {
+  padding: 5rem 1.5rem 4rem;
+}
+
+.project-hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #b45309;
+}
+
+.hero-summary {
+  max-width: 52rem;
+  font-size: 1.06rem;
+  color: var(--text-secondary);
+  margin: 0 0 1.5rem;
+}
+
+.publication-affiliation {
+  margin-bottom: 1.25rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.project-hero-panel {
+  display: grid;
+  gap: 1rem;
+}
+
+.signal-grid,
+.feature-grid,
+.method-grid,
+.results-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.signal-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.signal-card,
+.feature-card,
+.method-card,
+.diagram-card,
+.result-card {
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(14px);
+}
+
+.signal-card,
+.feature-card,
+.method-card,
+.result-card {
+  padding: 1.25rem;
+}
+
+.signal-card strong,
+.feature-card h2,
+.method-card h3,
+.result-card h3 {
+  color: var(--text-primary);
+}
+
+.signal-card p,
+.feature-card p,
+.method-card p,
+.result-card p,
+.diagram-caption,
+.result-summary {
+  color: var(--text-secondary);
+}
+
+.signal-card-primary {
+  padding: 1.35rem;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.98), rgba(30, 41, 59, 0.94));
+  color: #f8fafc;
+}
+
+.signal-card-primary p,
+.signal-card-primary strong {
+  color: #f8fafc;
+}
+
+.signal-card-outline {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 248, 236, 0.92));
+}
+
+.signal-label,
+.feature-kicker,
+.result-badge,
+.method-step {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.signal-label,
+.feature-kicker,
+.method-step {
+  background: rgba(245, 158, 11, 0.12);
+  color: #b45309;
+}
+
+.signal-card-primary .signal-label {
+  background: rgba(255, 255, 255, 0.12);
+  color: #f8fafc;
+}
+
+.project-strip {
+  padding-top: 3rem;
+}
+
+.feature-grid,
+.method-grid,
+.results-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.feature-card h2 {
+  font-size: 1.2rem;
+  line-height: 1.35;
+  margin: 0.75rem 0;
+}
+
+.method-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.method-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.method-card-accent {
+  background: linear-gradient(180deg, rgba(254, 243, 199, 0.92), rgba(255, 251, 235, 0.94));
+}
+
+.method-card h3 {
+  font-size: 1.1rem;
+  margin: 0.75rem 0;
+}
+
+.diagram-card {
+  padding: 1.4rem;
+}
+
+.diagram-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  gap: 0.9rem;
+  align-items: center;
+}
+
+.diagram-node {
+  padding: 1rem;
+  border-radius: 18px;
+  min-height: 7.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: inset 0 0 0 1px rgba(148, 163, 184, 0.18);
+}
+
+.diagram-node span {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.diagram-node strong {
+  font-size: 1rem;
+  color: inherit;
+}
+
+.diagram-node-input {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(254, 249, 230, 0.96));
+}
+
+.diagram-node-gate {
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.96), rgba(30, 41, 59, 0.94));
+  color: #f8fafc;
+}
+
+.diagram-node-gate span,
+.diagram-node-gate strong {
+  color: #f8fafc;
+}
+
+.diagram-node-output {
+  background: linear-gradient(180deg, rgba(255, 251, 235, 0.96), rgba(255, 255, 255, 0.98));
+}
+
+.diagram-arrow {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #b45309;
+}
+
+.diagram-caption {
+  margin-top: 1rem;
+  font-size: 0.96rem;
+}
+
+.section-heading {
+  margin-bottom: 1.5rem;
+}
+
+.content-narrow {
+  max-width: 58rem;
+}
+
+.result-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.result-badge {
+  background: rgba(14, 165, 233, 0.12);
+  color: #0369a1;
+  white-space: nowrap;
+}
+
+.result-summary {
+  margin: 0.85rem 0 1rem;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+.benchmark-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.benchmark-table th,
+.benchmark-table td {
+  padding: 0.6rem 0.45rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.benchmark-table thead th {
+  color: var(--text-secondary);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.benchmark-table .table-total td {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.results-callout {
+  margin-top: 1.25rem;
+  padding: 1rem 1.15rem;
+  border-radius: 18px;
+  background: linear-gradient(90deg, rgba(15, 23, 42, 0.96), rgba(30, 41, 59, 0.92));
+  color: #e2e8f0;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.16);
+}
+
+.results-callout strong {
+  color: #ffffff;
+}
+
+#bibtex-code {
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.pdf-frame {
+  overflow: hidden;
+  border-radius: 24px;
+  box-shadow: 0 22px 48px rgba(15, 23, 42, 0.14);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+}
+
+.pdf-frame iframe {
+  display: block;
+  border: 0;
+  width: 100%;
+  background: #fff;
+}
+
+.project-footer {
+  background: transparent;
+  padding-top: 1rem;
+}
+
+.project-footer .content {
+  color: var(--text-secondary);
+}
+
+.publication-title {
+  margin-bottom: 1rem !important;
+}
+
+.publication-authors {
+  margin-bottom: 0.75rem;
+}
+
+.publication-authors .author-block {
+  margin-right: 0.4rem;
+  font-weight: 700;
+}
+
+.publication-links {
+  justify-content: flex-start;
+}
+
+.publication-links .button.is-dark {
+  background: #0f172a !important;
+}
+
+.publication-links .button.github-link {
+  background: #6b7280 !important;
+}
+
+.publication-links .button.github-link:hover {
+  background: #4b5563 !important;
+}
+
+@media screen and (max-width: 1024px) {
+  .project-hero-layout,
+  .method-layout,
+  .feature-grid,
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .method-grid,
+  .signal-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .project-hero .hero-body {
+    padding: 3.5rem 1rem 2.5rem;
+  }
+
+  .publication-title {
+    font-size: 2.2rem !important;
+  }
+
+  .method-grid,
+  .signal-grid,
+  .diagram-row {
+    grid-template-columns: 1fr;
+  }
+
+  .diagram-arrow {
+    text-align: center;
+    transform: rotate(90deg);
+  }
+
+  .publication-links {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .publication-links .link-block {
+    display: block;
+    margin: 0 0 0.75rem;
+  }
 }
 
 
