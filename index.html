@@ -215,6 +215,7 @@
                     <span>arXiv</span>
                   </a>
                 </span>
+                
               </div>
             </div>
             <div class="project-hero-panel">
@@ -246,6 +247,10 @@
       </div>
     </section>
 
+    
+
+    
+
     <section class="section project-strip">
       <div class="container is-max-desktop">
         <div class="feature-grid">
@@ -264,6 +269,14 @@
             <h2>Recover accuracy without giving up the speedup.</h2>
             <p>On LIBERO-Goal and LIBERO-Long, the gated variant restores the lost accuracy while retaining most of the compute savings.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="publication-banner">
+          <img src="Neural_Introspection_Gating_for_Adaptive_KV_Cache_Reuse_in_Vision_Language_Action_Models/figures/pipeline.png" alt="Pipeline diagram">
         </div>
       </div>
     </section>
@@ -345,11 +358,13 @@
           <p class="eyebrow">Results</p>
           <h2 class="title is-3">Accuracy-compute trade-off on LIBERO</h2>
         </div>
+        <div class="publication-banner">
+          <img src="Neural_Introspection_Gating_for_Adaptive_KV_Cache_Reuse_in_Vision_Language_Action_Models/figures/libero_benchmark.png" alt="LIBERO benchmark">
+        </div>
         <div class="results-grid">
           <article class="result-card">
             <div class="result-card-header">
               <h3>OpenVLA</h3>
-              <span class="result-badge">Harder setting</span>
             </div>
             <p class="result-summary">Gating rescues the benchmark where blind caching loses accuracy on the long-horizon suite.</p>
             <p class="table-units">Numbers shown as <strong>Success rate (%) / TFLOPs</strong></p>
@@ -376,7 +391,6 @@
           <article class="result-card">
             <div class="result-card-header">
               <h3>OpenVLA-OFT</h3>
-              <span class="result-badge">Safe regime</span>
             </div>
             <p class="result-summary">When caching is already stable, the gate keeps performance on par with the baselines and adds little overhead.</p>
             <p class="table-units">Numbers shown as <strong>Success rate (%) / TFLOPs</strong></p>
