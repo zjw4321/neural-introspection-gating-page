@@ -42,7 +42,7 @@
   <meta name="citation_author" content="Okada, Kei">
   <meta name="citation_publication_date" content="2026">
   <meta name="citation_conference_title" content="IROS 2026">
-  <meta name="citation_pdf_url" content="static/pdfs/Neural_Introspection_Gating_for_Adaptive_KV_Cache_Reuse_in_Vision_Language_Action_Models.pdf">
+  <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2608.10824">
   
   <!-- Additional SEO -->
   <meta name="theme-color" content="#0f172a">
@@ -135,7 +135,7 @@
     "image": "static/images/social_preview.png",
     "keywords": ["vision-language-action", "KV cache", "adaptive inference", "robotics", "uncertainty estimation"],
     "abstract": "Vision-Language-Action models spend substantial compute on KV-cache recomputation even when consecutive frames are redundant. This paper adds a lightweight introspection gate that watches the model's own logit margin and invalidates the cache only when confidence drops, preserving most of VLA-Cache's savings while recovering accuracy on harder LIBERO tasks.",
-    "citation": "@article{wu2026neuralintrospection, title={Neural Introspection Gating for Adaptive KV-Cache Reuse in Vision-Language-Action Models}, author={Wu, Zhijie and Kawaharazuka, Kento and Okada, Kei}, year={2026}, note={Accepted at IROS 2026}}",
+    "citation": "@article{wu2026neuralintrospection, title={Neural Introspection Gating for Adaptive KV-Cache Reuse in Vision-Language-Action Models}, author={Wu, Zhijie and Kawaharazuka, Kento and Okada, Kei}, year={2026}, note={Accepted at IROS 2026}, url={https://arxiv.org/abs/2608.10824}, eprint={2608.10824}, archivePrefix={arXiv}}",
     "isAccessibleForFree": true,
     "license": "https://creativecommons.org/licenses/by/4.0/",
     "mainEntity": {
@@ -198,9 +198,9 @@
               </p>
               <div class="publication-links">
                 <span class="link-block">
-                  <a href="static/pdfs/Neural_Introspection_Gating_for_Adaptive_KV_Cache_Reuse_in_Vision_Language_Action_Models.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://arxiv.org/pdf/2608.10824" target="_blank" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                    <span>Paper PDF</span>
+                    <span>Paper</span>
                   </a>
                 </span>
                 <span class="link-block">
@@ -210,7 +210,7 @@
                   </a>
                 </span>
                 <span class="link-block">
-                  <a href="https://arxiv.org/" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://arxiv.org/abs/2608.10824" target="_blank" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon"><i class="ai ai-arxiv"></i></span>
                     <span>arXiv</span>
                   </a>
@@ -352,6 +352,7 @@
               <span class="result-badge">Harder setting</span>
             </div>
             <p class="result-summary">Gating rescues the benchmark where blind caching loses accuracy on the long-horizon suite.</p>
+            <p class="table-units">Numbers shown as <strong>Success rate (%) / TFLOPs</strong></p>
             <div class="table-wrap">
               <table class="benchmark-table">
                 <thead>
@@ -378,6 +379,7 @@
               <span class="result-badge">Safe regime</span>
             </div>
             <p class="result-summary">When caching is already stable, the gate keeps performance on par with the baselines and adds little overhead.</p>
+            <p class="table-units">Numbers shown as <strong>Success rate (%) / TFLOPs</strong></p>
             <div class="table-wrap">
               <table class="benchmark-table">
                 <thead>
@@ -421,8 +423,8 @@
   title   = {Neural Introspection Gating for Adaptive KV-Cache Reuse in Vision-Language-Action Models},
   author  = {Wu, Zhijie and Kawaharazuka, Kento and Okada, Kei},
   year    = {2026},
-  note    = {Accepted at IROS 2026},
-  url     = {static/pdfs/Neural_Introspection_Gating_for_Adaptive_KV_Cache_Reuse_in_Vision_Language_Action_Models.pdf}
+  eprint  = {2608.10824},
+  archivePrefix = {arXiv}
 }</code></pre>
       </div>
     </section>
